@@ -1,0 +1,154 @@
+.title {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.filters > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.filters select {
+  padding: 0.2rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.25rem;
+}
+
+.product img {
+  width: 70%;
+  aspect-ratio: 9/11;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.product button {
+  display: block;
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.product .product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.product .product-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.open-cart {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: rgb(255, 197, 150);
+  border: solid 1.5px rgb(255, 144, 54);
+  transition: all ease 0.3s;
+  z-index: 1;
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.open-cart:hover {
+  background-color: rgb(255, 169, 98);
+  transform: scale(1.1);
+}
+
+input[type='checkbox'] ~ .cart {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ .cart {
+  display: block;
+  background-color: #ddd;
+  border-right: #000 1px solid;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cart button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.product-on-cart {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  max-width: 150px;
+}
+
+.product-on-cart img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  background-color: white;
+}
+
+.product-on-cart h3,
+.product-on-cart p,
+.product-on-cart b {
+  margin: 0.25rem 0;
+}
+
+.product-on-cart span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-on-cart p {
+  font-size: 1.1rem;
+}
+
+.product-on-cart span input {
+  max-width: 45px;
+  padding: 0.2rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  text-align: center;
+}
+
+.cart > button {
+  margin: 2rem 0;
+  display: block;
+  width: 100%;
+  background-color: rgb(255, 172, 172);
+}
+
+.total-cart{
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
